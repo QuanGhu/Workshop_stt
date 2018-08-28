@@ -19,6 +19,8 @@ Route::get('/admin','Admin\DashboardController@index')->name('dashboard');
 Route::get('/category','Admin\CategoryController@index')->name('category');
 Route::post('/category/save','Admin\CategoryController@save')->name('save.category');
 Route::get('/category/delete/{id}','Admin\CategoryController@delete')->name('delete.category');
+Route::get('/category/edit/{id}','Admin\CategoryController@edit')->name('edit.category');
+Route::post('/category/update/','Admin\CategoryController@update')->name('update.category');
 // Route::group(['prefix' => 'admin'], function () {
 //     Route::get('/', 'Admin\DashboardController@index')->name('admin.dashboard');
 //     // Route::post('/save', 'Admin\PoliController@save')->name('poli.save');

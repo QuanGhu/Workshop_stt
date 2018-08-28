@@ -22,7 +22,10 @@
         <tr>
             <td>{{ $key + 1 }}</td>
             <td>{{ $data->name }}</td>
-            <td> <a href="{{ route('delete.category', $data->id) }}">Hapus</a> </td>
+            <td> 
+                <a href="{{ route('delete.category', $data->id) }}">Hapus</a>
+                <a href="{{ route('edit.category', $data->id) }}">Update</a>  
+            </td>
         </tr>
     @endforeach
 </table>

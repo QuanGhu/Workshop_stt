@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
-        <form action="{{ route('save.category') }}" method="POST">
+        <form action="{{ route('update.category') }}" method="POST">
             {{ csrf_field() }}
             <input type="hidden" value="{{ $data->id }}" name="id"/>
             <div class="form-group">

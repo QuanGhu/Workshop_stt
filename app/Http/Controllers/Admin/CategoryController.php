@@ -33,4 +33,21 @@ class CategoryController extends Controller
         return $category ? redirect()->route('category')
             : redirect()->route('category');
     }
+
+    public function edit($id)
+    {
+        $data = Category::findOrFail($id);
+        
+        return view('category.form')->with('data', $data);
+    }
+
+    public function update(Request $request)
+    {
+        $category = Category::findOrFail($request->id);
+        $category->name = $request->name;
+        $category->save();
+
+        return $category ? redirect()->route('category')
+            : redirect()->route('category');
+    }
 }
