@@ -8,4 +8,9 @@ class Category extends Model
 {
     protected $table = 'category';
     protected $fillable = [ 'name' ];
+
+    public function product()
+    {
+        return $this->hasMany('App\Models\Product','category_id');
+    }
 }
