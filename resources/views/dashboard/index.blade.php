@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    <div class="row">
-        
-    </div>
+<div>
+    ini tampilan dari blade
+</div>
 @endsection
